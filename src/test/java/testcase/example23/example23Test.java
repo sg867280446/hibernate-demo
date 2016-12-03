@@ -21,7 +21,7 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package testcase;
+package testcase.example23;
 
 import java.util.Date;
 import java.util.List;
@@ -37,7 +37,7 @@ import testcase.base.BaseSetup;
  *
  * @author Steve Ebersole
  */
-public class SetupTest extends BaseSetup {
+public class example23Test extends BaseSetup {
 
 	@SuppressWarnings({ "unchecked" })
 	public void testBasicUsage() {
