@@ -27,13 +27,9 @@ import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import example23.AttributeConverter.Person;
-import junit.framework.TestCase;
+import testcase.base.BaseSetup;
 
 /**
  * Illustrates the use of Hibernate native APIs.  The code here is unchanged from the {@code basic} example, the
@@ -41,31 +37,7 @@ import junit.framework.TestCase;
  *
  * @author Steve Ebersole
  */
-public class SetupTest extends TestCase {
-	private SessionFactory sessionFactory;
-
-	@Override
-	protected void setUp() throws Exception {
-		// A SessionFactory is set up once for an application!
-		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-				.configure() // configures settings from hibernate.cfg.xml
-				.build();
-		try {
-			sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
-		}
-		catch (Exception e) {
-			// The registry would be destroyed by the SessionFactory, but we had trouble building the SessionFactory
-			// so destroy it manually.
-			StandardServiceRegistryBuilder.destroy( registry );
-		}
-	}
-
-	@Override
-	protected void tearDown() throws Exception {
-		if ( sessionFactory != null ) {
-			sessionFactory.close();
-		}
-	}
+public class SetupTest extends BaseSetup {
 
 	@SuppressWarnings({ "unchecked" })
 	public void testBasicUsage() {
