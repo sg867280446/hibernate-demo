@@ -35,8 +35,8 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="example23.AttributeConverter.Person"/>
-
+        <mapping class="hibernate.assosiations.Person"/>
+		<mapping class="hibernate.assosiations.Phone"/>
     </session-factory>
 
 </hibernate-configuration>
