@@ -80,7 +80,7 @@ public class assosiationsTest extends BaseSetup{
 		session.beginTransaction();
 		
 		/**
-		 * 以下两种方式的移除phone的方法都没有区别，估计是因为可以phone表找得到person_id(而添加操作没有person_id)
+		 * 以下两种方式的移除phone的方法都没有区别，估计是因为phone表可以找得到person_id(而添加操作没有person_id)
 		 */
 		//person.getPhones().remove( phone1 );
 		person.removePhone(phone1);

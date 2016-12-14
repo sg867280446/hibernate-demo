@@ -32,6 +32,5 @@ public class Person2 {
 		phones.remove( phone );
 		phone.setPerson( null );
 	}
-
-	    
+    
 }
